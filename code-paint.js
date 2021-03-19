@@ -141,7 +141,7 @@ class paint {
 
 }
 
-var p = new paint();
+let p = new paint();
 
 function changeColor(color) {
     p.color = color;
@@ -155,6 +155,9 @@ function changeLineWidth(lineWidth) {
 }
 function setTool(tool) {
     p.tool = tool;
+    if (p.color === 'white') {
+        p.color = 'black';
+    }
 }
 function undo() {
     p.undo();
